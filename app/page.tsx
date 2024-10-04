@@ -53,7 +53,7 @@ export default function Home() {
       <h2 className="max-w-lg mx-auto font-bold mt-4">Task-List</h2>
 
       <div className="max-w-lg mx-auto space-y-2">
-        {tasks.map((task, i) => {
+        {tasks.map((task) => {
           return ( 
             <Task key={task.id} task={task}/>
           );

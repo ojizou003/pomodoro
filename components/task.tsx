@@ -6,21 +6,17 @@ import { Button } from "@/components/ui/button";
 import useLocalStorageState from 'use-local-storage-state';
 import { useStopwatch } from 'react-timer-hook';
 import { useEffect } from 'react';
-import { Span } from 'next/dist/trace';
 
 export default function Task({task}: {task: TaskType}){
-    const [tasks, setTasks] = useLocalStorageState<(string | { id: string; title: string; })[]>('tasks', {
+    const [setTasks] = useLocalStorageState<(string | { id: string; title: string; })[]>('tasks', {
         defaultValue: []
     });
 
     const [mode, setMode] = useLocalStorageState<'working' | 'break'>('working');
 
     const {
-        totalSeconds,
         seconds,
         minutes,
-        hours,
-        days,
         isRunning,
         start,
         pause,
