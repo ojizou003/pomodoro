@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Pomodoro",
+  title: "Task-Timer",
   description: "フリーランス用タスク管理ツール",
 };
 
