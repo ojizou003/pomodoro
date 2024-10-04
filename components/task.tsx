@@ -8,7 +8,7 @@ import { useStopwatch } from 'react-timer-hook';
 import { useEffect } from 'react';
 
 export default function Task({task}: {task: TaskType}){
-    const [setTasks] = useLocalStorageState<(string | { id: string; title: string; })[]>('tasks', {
+    const [, setTasks] = useLocalStorageState<(string | { id: string; title: string; })[]>('tasks', {
         defaultValue: []
     });
 
