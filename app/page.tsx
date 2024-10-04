@@ -45,7 +45,8 @@ export default function Home() {
             <label className="font-bold" htmlFor="title">Task</label>
             <Input {...register('title', {
               required: true
-            })} id='title' />
+            })} 
+            />
         </div>
         <Button disabled={!isValid}>ENTRY</Button>
       </form>
